@@ -1,5 +1,5 @@
 {
-  "name": "Kismet Wireless",
+  "name": "Kismet.io",
   "tagline": "",
   "body": "\r\n## Introdução\r\n\r\nKismet Wireless, diferente de outros detectores de rede wireless, trabalha passivamente,ele não envia pacotes para checar a rede ou invadi-la. Porem ele é capaz de detectar a presença dos dois, tanto clientes quanto pontos de acesso e associar um com o outro.E uma característica q faz o Kismet ter presença mundial é o fato de ser uma ferramenta de monitoramento totalmente open source.\r\n\r\n## Instalação\r\n\r\nO Kismet pode rodar tanto em plataforma linux quanto no windows, porem para a segunda opção é necessario o uso do Cygwin para poder rodar.No linux para facilitar podemos usar sistemas operacionais que ja vem com a ferramenta instalada como por exemplo o Kali Linux que é o sistema feito para testes de ataque e defesa em redes.\r\n\r\n## Ferramentas\r\n\r\n\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
