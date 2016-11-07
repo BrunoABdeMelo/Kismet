@@ -28,27 +28,31 @@
 
     <div class="container">
       <section id="main_content">
-        <h3>
+        <p>continuar a escrever</p>
+
+<h3>
 <a id="introdução" class="anchor" href="#introdu%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introdução</h3>
 
-<p>É uma ferramenta poderosa, que pode ser usada tanto para checar a segurança de sua própria rede wireless quanto para checar a presença de outras redes próximas e, assim, descobrir os canais que estão mais congestionados (de forma a configurar sua rede para usar um que esteja livre) ou, até mesmo, invadir redes. O Kismet em si não impõe restrições ao que você pode fazer. Assim como qualquer outra ferramenta, ele pode ser usado de forma produtiva ou destrutiva, de acordo com a índole de quem usa.
-  Uma observação é que o Kismet por si não faz ataques ou defende você de invasores, ele é uma ferramenta para gerar dados e então poder ser usada por outras de forma defensiva ou ofensiva.</p>
+<p>É uma ferramenta poderosa, que pode ser usada tanto para checar a segurança de sua própria rede wireless quanto para checar a presença de outras redes próximas e, assim, descobrir os canais que estão mais congestionados (de forma a configurar sua rede para usar um que esteja livre) ou, até mesmo, invadir redes. O Kismet em si não impõe restrições ao que você pode fazer. Assim como qualquer outra ferramenta, ele pode ser usado de forma produtiva ou destrutiva, de acordo com a índole de quem usa.</p>
+
+<p>Uma observação é que o Kismet por si não faz ataques ou defende você de invasores, ele é uma ferramenta para gerar dados e então poder ser usado por outros softwares de forma defensiva ou ofensiva, ele é so um Sniffer.</p>
 
 <h3>
 <a id="sniffers" class="anchor" href="#sniffers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sniffers</h3>
 
-<p>Os Sniffers capturam pacotes de rede colocando a interface de rede Ethernet/Wireless, em modo passivo. No caso de redes locais Ethernet os dados trafegam de uma máquina a outra por meio do cabo em pequenas unidades chamadas frames. Esses frames são divididos em seções que carregam informações específicas. Os Sniffers mesmo não sendo direcionado como receptor dessa mensagem "escuta" ela e procura por dados. No caso da rede Wireless é um pouco diferente já que teria que existir alguém pra fazer o link dos receptores e dos despachadores, porem ambas impõem um risco de segurança.</p>
+<p>Os Sniffers capturam pacotes de rede colocando a interface de rede Ethernet/Wireless, em modo passivo. No caso de redes locais Ethernet os dados trafegam de uma máquina a outra por meio do cabo em pequenas unidades chamadas frames. Esses frames são divididos em seções que carregam informações específicas. Os Sniffers mesmo não sendo direcionado como receptor dessa mensagem interceptam ela e vão procurar ler o dado. No caso da rede Wireless é um pouco diferente já que teria que existir alguém pra fazer o link dos receptores e dos despachadores da informação, porem ambas impõem um risco de segurança.</p>
 
 <h3>
 <a id="plataformas" class="anchor" href="#plataformas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plataformas</h3>
 
-<p>Originalmente desenvolvido para uso em plataformas Linux, hoje já é compatível com OSX. No caso do Windows a plataforma não tem compatibilidade direta, para funcionar devera ser utilizado por intermédio do  Cygwin (Cygwin.com) para poder executar corretamente os comandos no terminal.
-  Nos exemplos usados nesta pagina será utilizado a versão que ja vem instalada no Kali Linux (para mais informações sobre o Kali Linux acesse: kalinePage).</p>
+<p>Originalmente desenvolvido para uso em plataformas Linux, hoje já é compatível com OSX. No caso do Windows a plataforma não tem compatibilidade direta, para funcionar devera ser utilizado por intermédio do  Cygwin ( Cygwin.com ) para poder executar corretamente os comandos no terminal.</p>
+
+<p>Nos exemplos usados nesta pagina será utilizado a versão que já vem instalada no Kali Linux (para mais informações sobre o Kali Linux acesse: kalinePage).</p>
 
 <h3>
 <a id="vantagens" class="anchor" href="#vantagens" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vantagens</h3>
 
-<p>O kismet é um software open source continuamente em desenvolvimento, esta é sua principal vantagem, a comunidade vai conforme a necessidade aumentar evoluir e adaptar o software e alem disso o Kismet ganhou seu nome como sendo um dos primeiros a de forma trivial para o usuario fazer uma ponte mostrando uma conexão entre os hosts e os clients na ferrameta, ou seja, nesta aplicação se você localizar o host você consegue ver seus clientes ativos, o que facilita no controle da rede ou buscar informações diretas para atacar tal maquina.</p>
+<p>O Kismet é um software open source continuamente em desenvolvimento, esta é sua principal vantagem, a comunidade vai, conforme a necessidade, evoluir e adaptar o software, e além disso o Kismet ganhou seu nome como sendo um dos primeiros a de forma trivial para o usuário fazer uma ponte mostrando uma conexão entre os hosts e os clients na ferramenta, ou seja, nesta aplicação se você localizar o host você consegue ver seus clientes ativos, o que facilita no controle da rede ou buscar informações diretas para atacar tal maquina.</p>
 
 <h3>
 <a id="tutorial" class="anchor" href="#tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h3>
@@ -57,7 +61,7 @@
 
 <p><img src="images/1.PNG" alt=""></p>
 
-<p>Na proxima etapa somente precisara se preocupar com o nome que sera dado as extensoes dos dados gerados e se deseja começar vendo o console ao iniciar. Optaremos por nome Kismet e não mostrar o console.</p>
+<p>Na proxima etapa somente precisara se preocupar com o nome que sera dado as extensões dos dados gerados e se deseja começar vendo o console ao iniciar. Optaremos por nome Kismet e não mostrar o console.</p>
 
 <p><img src="images/2.PNG" alt=""></p>
 
@@ -65,11 +69,11 @@
 
 <p><img src="images/3.PNG" alt=""></p>
 
-<p>Colocaremos a entrada da interface wireless na primeira opção sendo "wlan0" ( caso não saiba se tem ou não saiba o nome, basta no terminal digitar ifconfig, caso do linux, e verificar o nome da interface wireless disponivel). E alem disso colocaremos um nome para essa interface "Test".</p>
+<p>Colocaremos a entrada da interface wireless na primeira opção sendo "wlan0" ( caso não saiba se tem ou não saiba o nome, basta no terminal digitar ifconfig, caso do linux, e verificar o nome da interface wireless disponível). E alem disso colocaremos um nome para essa interface "Test".</p>
 
 <p><img src="images/4.PNG" alt=""></p>
 
-<p>Pronto, Kismet já esta em ação, ele está verificando todas as redes wireless disponiveis na sua area de alcance</p>
+<p>Pronto, Kismet já esta em ação, ele está verificando todas as redes wireless disponíveis na sua área de alcance</p>
 
 <p><img src="images/5.PNG" alt=""></p>
 
@@ -79,30 +83,13 @@
 
 <p>E se clicarmos em View-&gt;Clientes poderemos ver todos os clientes que estão conectados nesta rede</p>
 
-<p><img src="images/8.PNG" alt=""></p>
+<p><img src="images/8.PNG" alt=""> Podemos sobre esses clientes adicionar notas, para poder por exemplo fazer um cadastro de maquinas que estão aptas a usar a rede, caso seja encontrado uma maquina não cadastrada fazer algo a respeito da segurança.</p>
 
-<p>Podemos sobre esses clientes adicionar notas, para poder por exemplo fazer um cadastro de maquinas que estão aptas a usar a rede, caso seja encontrado uma maquina não cadastrada fazer algo a respeito da segurança.</p>
+<p><img src="images/9.PNG" alt=""> Se nos aprofundarmos em um cliente especifico poderemos ver o trafego de dados e a distancia dele com sua maquina por meio do sinal</p>
 
-<p><img src="images/9.PNG" alt=""></p>
+<p><img src="images/10.PNG" alt=""> E ao sair do Kismet, finalizando o background <img src="images/13.PNG" alt=""> O Kismet ira mostrar os dados gerados, por exemplo o arquivo "pcap" <img src="images/14.PNG" alt=""> Na pasta onde foi salvo o arquivo, você pode abrilo e fazer uma leitura mais aprofundada dos dados gerados por outro software capaz para isso</p>
 
-<p>Se nos aprofundarmos em um cliente especifico poderemos ver o trafego de dados e a distancia dele com sua maquina por meio do sinal</p>
-
-<p><img src="images/10.PNG" alt=""></p>
-
-<p>E ao sair do Kismet, finalizando o background</p>
-
-<p><img src="images/13.PNG" alt=""></p>
-
-<p>O Kismet ira mostrar os dados gerados, por exemplo o arquivo "pcap"</p>
-
-<p><img src="images/14.PNG" alt=""></p>
-
-<p>Na pasta onde foi salvo o arquivo, você pode abrilo e fazer uma leitura mais aprofundada dos dados gerados por outro software capaz para isso</p>
-
-<p><img src="images/15.PNG" alt=""></p>
-
-<h2>
-<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h2>
+<p><img src="images/15.PNG" alt=""> ##  Links</p>
       </section>
     </div>
 
