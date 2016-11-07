@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Kismet.io by BrunoABdeMelo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Kismet.io</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/BrunoABdeMelo/Kismet" class="btn">View on GitHub</a>
-      <a href="https://github.com/BrunoABdeMelo/Kismet/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/BrunoABdeMelo/Kismet/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <section class="main-content">
-      <h3>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Kismet.io by BrunoABdeMelo</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Kismet.io</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/BrunoABdeMelo/Kismet/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/BrunoABdeMelo/Kismet/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/BrunoABdeMelo/Kismet" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
 <a id="introdução" class="anchor" href="#introdu%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introdução</h3>
 
 <p>É uma ferramenta poderosa, que pode ser usada tanto para checar a segurança de sua própria rede wireless quanto para checar a presença de outras redes próximas e, assim, descobrir os canais que estão mais congestionados (de forma a configurar sua rede para usar um que esteja livre) ou, até mesmo, invadir redes. O Kismet em si não impõe restrições ao que você pode fazer. Assim como qualquer outra ferramenta, ele pode ser usado de forma produtiva ou destrutiva, de acordo com a índole de quem usa.
   Uma observação é que o Kismet por si não faz ataques ou defende você de invasores, ele é uma ferramenta para gerar dados e então poder ser usada por outras de forma defensiva ou ofensiva.</p>
 
 <h3>
+<a id="sniffers" class="anchor" href="#sniffers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sniffers</h3>
+
+<p>Os Sniffers capturam pacotes de rede colocando a interface de rede Ethernet/Wireless, em modo passivo. No caso de redes locais Ethernet os dados trafegam de uma máquina a outra por meio do cabo em pequenas unidades chamadas frames. Esses frames são divididos em seções que carregam informações específicas. Os Sniffers mesmo não sendo direcionado como receptor dessa mensagem "escuta" ela e procura por dados. No caso da rede Wireless é um pouco diferente já que teria que existir alguém pra fazer o link dos receptores e dos despachadores, porem ambas impõem um risco de segurança.</p>
+
+<h3>
 <a id="plataformas" class="anchor" href="#plataformas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plataformas</h3>
 
-<p>Originalmente desenvolvido para uso em plataformas Linux, porem hoje já é compatével com OSX e em certo level com o Windows.
-  No caso do Windows a plataforma não tem compatibilidade direta, para funcionar devera ser utilizado por intermédio do  Cygwin (Cygwin.com).</p>
+<p>Originalmente desenvolvido para uso em plataformas Linux, hoje já é compatível com OSX. No caso do Windows a plataforma não tem compatibilidade direta, para funcionar devera ser utilizado por intermédio do  Cygwin (Cygwin.com) para poder executar corretamente os comandos no terminal.
+  Nos exemplos usados nesta pagina será utilizado a versão que ja vem instalada no Kali Linux (para mais informações sobre o Kali Linux acesse: kalinePage).</p>
 
 <h3>
 <a id="vantagens" class="anchor" href="#vantagens" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vantagens</h3>
 
-<p>O kismet é um software open source ainda em desenvolvimento, nesta pagina usaremos a versão mais estável no momento, sabendo que existe funcionalidades extras em versões em teste ainda.
-  O ponto mais forte que levou o Kismet a ter espaço no mercado , alem de ser open source, é o fato de ser uma das poucas ferramentas focadas em rastreamento de rede wireless quando inicialmente desenvolvido.</p>
+<p>O kismet é um software open source continuamente em desenvolvimento, esta é sua principal vantagem, a comunidade vai conforme a necessidade aumentar evoluir e adaptar o software e alem disso o Kismet ganhou seu nome como sendo um dos primeiros a de forma trivial para o usuario fazer uma ponte mostrando uma conexão entre os hosts e os clients na ferrameta, ou seja, nesta aplicação se você localizar o host você consegue ver seus clientes ativos, o que facilita no controle da rede ou buscar informações diretas para atacar tal maquina.</p>
 
 <h3>
 <a id="tutorial" class="anchor" href="#tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h3>
 
 <p>Ao abrir o Kismet<br>
-<img src="images/11.PNG" alt=""></p>
+<img src="images/1.PNG" alt=""></p>
 
 <h2>
 <a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h2>
+      </section>
+    </div>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/BrunoABdeMelo/Kismet">Kismet.io</a> is maintained by <a href="https://github.com/BrunoABdeMelo">BrunoABdeMelo</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+    
   </body>
 </html>
